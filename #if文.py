@@ -93,5 +93,13 @@ if retirement < 10:
     print("You get to retire soon.")
 else:
     print("You have a long time until you can retire!")
-    
-    
+
+#関数内からグローバル変数に書き込み
+x = 100
+
+def f():
+  global x
+  x += 1
+  print(x)
+
+f()
