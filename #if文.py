@@ -93,5 +93,25 @@ if retirement < 10:
     print("You get to retire soon.")
 else:
     print("You have a long time until you can retire!")
-    
-    
+
+#関数内からグローバル変数に書き込み
+x = 100
+
+def f():
+  global x
+  x += 1
+  print(x)
+
+f()
+
+#例外処理=予想されるエラーを回避するための処理
+a = input("50")
+b = input("10")
+a = int(a)
+b = int(b)
+print(a/b)
+
+
+a = 50
+b = 10
+print(a/b)
