@@ -1,5 +1,8 @@
 #if文
 
+from ast import Try
+
+
 x = 2
 if x == 2:
   print("数値は2です")
@@ -105,13 +108,22 @@ def f():
 f()
 
 #例外処理=予想されるエラーを回避するための処理
-#try=発生の可能性のあるエラー
-#except=例外が発生した場合に処理
-a = input("50")
-b = input("10")
+#try=例外発生の可能性のあるエラー
+#except=例外が発生した場合に実行するコード
+a = input("type a number:")
+b = input("type another:")
 a = int(a)
 b = int(b)
 try:
-  print(a/b)
-  except ZeroDivisionError:
-  print("b cannot be zero.")
+    print(a / b)
+except ZeroDivisionError:
+    print("b cannot be zero.")
+#複数の場合
+try:
+    a = input("type a number:")
+    b = input("type another:")
+    a = int(a)
+    b = int(b)
+    print(a / b)
+except (ZeroDivisionError, ValueError):
+    print("Invalid input.")
