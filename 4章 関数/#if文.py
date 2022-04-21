@@ -127,3 +127,16 @@ try:
     print(a / b)
 except (ZeroDivisionError, ValueError):
     print("Invalid input.")
+
+#ドキュメンテーション文字列/関数の内容について記載
+def add(x, y):
+  """
+  Returns x+y
+  :param x: int.
+  :param y: int.
+  :return: int sum of x and y.
+  """
+  return x+y
+
+#出力したい値を直接関数に渡す
+print(100)
