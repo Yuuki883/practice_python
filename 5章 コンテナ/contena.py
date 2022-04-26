@@ -1,8 +1,6 @@
 #メソッド
 
 # 大文字にする
-from random import random
-
 "Hello".upper()
 #置換
 "Hello".replace("o","@")
