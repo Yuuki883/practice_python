@@ -1,6 +1,17 @@
+#def [関数名]([引数]):
+    #[関数定義]
+
+#
+def f(x):
+    return x * 2
+
+#関数の戻り値を変数に保存
+result = f(2)
+print(result)
+
+#
 def f(x):
     return x + 1
-
 
 z = f(4)
 
@@ -144,4 +155,48 @@ print(z)
 
 if x > 100:
   print("x is > 100")
+
+#関数内からグローバル変数に書き込み
+x = 100
+
+def f():
+  global x
+  x += 1
+  print(x)
+
+f()
+
+#例外処理=予想されるエラーを回避するための処理
+#try=例外発生の可能性のあるエラー
+#except=例外が発生した場合に実行するコード
+a = input("type a number:")
+b = input("type another:")
+a = int(a)
+b = int(b)
+try:
+    print(a / b)
+except ZeroDivisionError:
+    print("b cannot be zero.")
+#複数の場合
+try:
+    a = input("type a number:")
+    b = input("type another:")
+    a = int(a)
+    b = int(b)
+    print(a / b)
+except (ZeroDivisionError, ValueError):
+    print("Invalid input.")
+
+#ドキュメンテーション文字列/関数の内容について記載
+def add(x, y):
+  """
+  Returns x+y
+  :param x: int.
+  :param y: int.
+  :return: int sum of x and y.
+  """
+  return x+y
+
+#出力したい値を直接関数に渡す
+print(100)
 
