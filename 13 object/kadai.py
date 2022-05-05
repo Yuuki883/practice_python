@@ -59,16 +59,18 @@ a_rectangle.what_am_i()
 a_square.what_am_i()
 
 #4
-class Dog:
-    def __init__(self,name,breed,owner):
-      self.name = name
-      self.breed = breed
-      self.owner = owner
 
-class Person:
+
+class Rider():
     def __init__(self, name):
         self.name = name
+class Horse():
+    def __init__(self, name, rider):
+        self.name = name
+        self.rider = rider
 
-mick = Person("Mick Jagger")
-stan = Dog("Stanley","Bulldog",mick)
-print(stan.owner.name)
+the_rider = Rider("Sally")
+harry_the_horse = Horse("Harry", the_rider)
+
+print("The name of Horse is {}".format(harry_the_horse.name))
+print("The name of Rider is {}".format(harry_the_horse.rider.name))
