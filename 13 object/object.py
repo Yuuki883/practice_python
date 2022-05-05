@@ -99,19 +99,18 @@ a_square = Square(20, 20)
 a_square.print_size()
 
 #コンポジション/has-a関係、別クラスのオブジェクトを変数として持つ
-class Horse:
-  def __init__(self,name,owner):
-    self.name = name
-    self.owner = owner
+class Dog:
+    def __init__(self,name,breed,owner):
+      self.name = name
+      self.breed = breed
+      self.owner = owner
 
-class Rider:
-  def __init__(self,r_name):
-    self.r_name = r_name
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-n = Rider("Yuki")
-h_name = Horse("スーホー",n)
-print(h_name.owner.r_name)
-print("The name of Horse is {}".format(h_name.name))
-print("The name of Rider is {}".format(h_name.owner.r_name))
+mick = Person("Mick Jagger")
+stan = Dog("Stanley","Bulldog",mick)
+print(stan.owner.name)
 
 
