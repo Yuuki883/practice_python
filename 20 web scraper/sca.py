@@ -15,5 +15,5 @@ class Scraper:
         continue
       if "html" in url:
         print("\n" + url)
-news = "https://www.yahoo.co.jp/"
+news = "https://news.google.com/"
 Scraper(news).scrape()
